@@ -1,50 +1,11 @@
 //
-//  ViewController.swift
+//  MainVC-TableView.swift
 //  Networking [URLSession, Completion]
 //
 //  Created by e1ernal on 23.12.2023.
 //
 
 import UIKit
-
-class MainVC: UIViewController {
-
-    private let userTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-
-    var userData: UserResults?
-    
-    override func viewWillAppear(_ animated: Bool) {
-        NetworkService.shared.fetchData { result in
-            switch result {
-            case.success(let usersData):
-                self.userData = usersData
-                print(usersData.results[0])
-                DispatchQueue.main.async {
-                    self.userTableView.reloadData()
-                }
-                
-            case .failure(let failure):
-                print(failure.localizedDescription)
-            }
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        makeUI()
-    }
-    
-    private func makeUI() {
-        title = "User"
-        view.backgroundColor = .systemBackground
-        
-        setupTableView()
-    }
-}
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func setupTableView() {

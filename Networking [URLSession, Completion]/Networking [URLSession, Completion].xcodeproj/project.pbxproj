@@ -14,6 +14,8 @@
 		EDDEFC342B372F39001773CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDEFC322B372F39001773CA /* LaunchScreen.storyboard */; };
 		EDDEFC3C2B3730C4001773CA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEFC3B2B3730C4001773CA /* NetworkService.swift */; };
 		EDDEFC3E2B373A89001773CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEFC3D2B373A89001773CA /* User.swift */; };
+		EDDEFC442B376779001773CA /* MainVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEFC432B376779001773CA /* MainVC+TableView.swift */; };
+		EDDEFC462B376B8B001773CA /* MainVC+NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEFC452B376B8B001773CA /* MainVC+NavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EDDEFC352B372F39001773CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDDEFC3B2B3730C4001773CA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EDDEFC3D2B373A89001773CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EDDEFC432B376779001773CA /* MainVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+TableView.swift"; sourceTree = "<group>"; };
+		EDDEFC452B376B8B001773CA /* MainVC+NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+NavigationView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		EDDEFC262B372F39001773CA /* Networking [URLSession, Completion] */ = {
 			isa = PBXGroup;
 			children = (
-				EDDEFC272B372F39001773CA /* AppDelegate.swift */,
-				EDDEFC292B372F39001773CA /* SceneDelegate.swift */,
-				EDDEFC2B2B372F39001773CA /* MainVC.swift */,
-				EDDEFC302B372F39001773CA /* Assets.xcassets */,
-				EDDEFC322B372F39001773CA /* LaunchScreen.storyboard */,
+				EDDEFC422B37668C001773CA /* Models */,
+				EDDEFC412B376613001773CA /* Service */,
+				EDDEFC402B376606001773CA /* Controllers */,
+				EDDEFC3F2B3765D2001773CA /* Others */,
 				EDDEFC352B372F39001773CA /* Info.plist */,
-				EDDEFC3B2B3730C4001773CA /* NetworkService.swift */,
-				EDDEFC3D2B373A89001773CA /* User.swift */,
 			);
 			path = "Networking [URLSession, Completion]";
+			sourceTree = "<group>";
+		};
+		EDDEFC3F2B3765D2001773CA /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				EDDEFC302B372F39001773CA /* Assets.xcassets */,
+				EDDEFC322B372F39001773CA /* LaunchScreen.storyboard */,
+				EDDEFC272B372F39001773CA /* AppDelegate.swift */,
+				EDDEFC292B372F39001773CA /* SceneDelegate.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		EDDEFC402B376606001773CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDDEFC2B2B372F39001773CA /* MainVC.swift */,
+				EDDEFC432B376779001773CA /* MainVC+TableView.swift */,
+				EDDEFC452B376B8B001773CA /* MainVC+NavigationView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EDDEFC412B376613001773CA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EDDEFC3B2B3730C4001773CA /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EDDEFC422B37668C001773CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDDEFC3D2B373A89001773CA /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDEFC462B376B8B001773CA /* MainVC+NavigationView.swift in Sources */,
 				EDDEFC3C2B3730C4001773CA /* NetworkService.swift in Sources */,
 				EDDEFC2C2B372F39001773CA /* MainVC.swift in Sources */,
 				EDDEFC282B372F39001773CA /* AppDelegate.swift in Sources */,
+				EDDEFC442B376779001773CA /* MainVC+TableView.swift in Sources */,
 				EDDEFC3E2B373A89001773CA /* User.swift in Sources */,
 				EDDEFC2A2B372F39001773CA /* SceneDelegate.swift in Sources */,
 			);
