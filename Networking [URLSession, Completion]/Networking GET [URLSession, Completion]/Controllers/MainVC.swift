@@ -1,8 +1,8 @@
 //
-//  MainVC.swift
-//  Networking [Async Await]
+//  ViewController.swift
+//  Networking [URLSession, Completion]
 //
-//  Created by e1ernal on 24.12.2023.
+//  Created by e1ernal on 23.12.2023.
 //
 
 import UIKit
@@ -15,6 +15,9 @@ class MainVC: UIViewController {
         return tableView
     }()
 
+    let alert = UIAlertController(title: nil, message: "Please wait ...", preferredStyle: .alert)
+    let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+    
     var userData: UserResults?
     
     override func viewWillAppear(_ animated: Bool) {
