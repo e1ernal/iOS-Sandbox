@@ -28,7 +28,19 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        if userData == nil {
+            return 0
+        } else {
+            return 3
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if userData == nil {
+            return "No user data"
+        } else {
+            return "Networking with @escaping Completion"
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,6 +57,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             mainText = "\(user.name.title) \(user.name.first) \(user.name.last)"
             secondaryText = "Name"
         case 1:
+            mainText = user.gender
+            secondaryText = "Gender"
+        case 2:
             mainText = user.email
             secondaryText = "Email"
         default:
